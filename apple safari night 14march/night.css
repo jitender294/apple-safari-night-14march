@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  position: relative;
+  background: #f8f8f8;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.night {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 80px;
+  box-shadow: 0px 30px 10px #ccc,
+  0px 30px 30px rgba(0,0,0,0.25),
+  0px 28px 0px rgba(0,0,0,0.5),
+  0px 50px 60px rgba(0,0,0,0.1);
+}
+
+.circle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 35px;
+  background: linear-gradient(#1ec9ff, #2971e7);
+  border-radius: 50%;
+  box-shadow: 0px -5px 0 5px rgba(0, 0, 0, 0.15),
+  inset 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.circle span {
+  position: absolute;
+  width: 2px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transform: translateY(-135.55px) rotate(calc(8deg * var(--i)));
+  transform-origin: 0px 150px;
+}
+
+.circle span::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 12px;
+  background-color: white;
+  transform: rotate(4deg);
+  transform-origin: 0px 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.niddle {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    top: 190px;
+    left: 179px;
+    transform: translateX(8px) rotate(45deg) ;
+    inset: 0;
+    transition: 1.5s ease-in-out;
+}
+
+.night:hover .niddle{
+    transform: translateX(0px) rotate(600deg);
+}
+
+.niddle::before {
+  position: absolute;
+  display: flex;
+  content: '';
+  align-items: center;
+  justify-content: center;
+  border-right: 18px solid transparent;
+  border-left: 18px solid transparent;
+  border-bottom: 150px solid red;
+  /* left: 5px; */
+  top: -144px;
+}
+
+
+.niddle::after {
+    position: absolute;
+    content: '';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 18px solid transparent;
+    border-left: 18px solid transparent;
+    border-top: 150px solid white;
+    /* left: 5px; */
+    top: 6px;
+  }
+  
